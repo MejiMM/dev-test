@@ -1,0 +1,50 @@
+/* Fixed position on larger screens */
+@media screen and (min-width: 1000px) {
+    
+    .flex {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    
+    .timeline-item {
+        position: relative;
+    }
+    
+    .timeline-2 {
+        left: 106%;
+        bottom: 23.6%;
+    }
+
+    .timeline-3 {
+        bottom: 35%
+    }
+   
+    .timeline-4 {
+        top: 35%;
+    }
+
+    .timeline-5 {
+        top: 31%;
+        right: 105.6%;
+    }
+
+    .timeline-6 {
+        bottom: -1%;
+    }
+    
+} 
+
+/* Fixed compatibility issue for older browsers */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+    .timeline-item-content {
+        width: 100%;
+        padding: 50px;
+    }
+
+    .timeline-4, .timeline-5, .timeline-6 {
+        width: 100%;
+    }
+
+}

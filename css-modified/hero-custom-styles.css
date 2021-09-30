@@ -1,0 +1,64 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.hero-space {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+    text-align: center;
+    background-image: url(../images/final-frontier_medium_2x.jpg);
+    background-size: 125% 100%;
+}
+
+.hero-unit-moon-text {
+    padding: 15%;
+}
+
+/* Overwritten hero section styles and fixed background image alignment */
+.hero-unit-moon-exploration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+    text-align: center;
+    background-image: url(../images/luna_large_2x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Default label styles removed */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+/* Media query to correct the view on larger screen devices */
+@media screen and (min-width:768px) {
+
+    .hero-space,
+    .hero-unit-moon-exploration {
+        width: 50vw;
+        height: 100vh;
+    }
+} 
+
+/* Fixed compatibility issue for older browsers */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+    .grid-container {
+        display: flex;
+    }
+}
